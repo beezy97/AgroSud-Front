@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+    <h1>Liste employés</h1>
+    <dx-data-grid class="tab" id="gridContainer" [dataSource]="employees" keyExpr="id" [showBorders]="true"
+        (onRowUpdating)="updateEmployee($event)" (onRowInserting)="addEmployee($event)"
+        (onRowRemoving)="removeEmployee($event)">
+
+        <dxo-search-panel [visible]="true"></dxo-search-panel>
+        <dxo-paging [pageSize]="10"> </dxo-paging>
+        <dxo-pager [visible]="true" [allowedPageSizes]="allowedPageSizes" [displayMode]="displayMode"
+            [showPageSizeSelector]="showPageSizeSelector" [showInfo]="showInfo"
+            [showNavigationButtons]="showNavButtons">
+        </dxo-pager>
+        <dxo-editing mode="form" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
+        </dxo-editing>
+
+        <dxi-column dataField="firstname" caption="Prénom"></dxi-column>
+        <dxi-column dataField="lastname" caption="Nom"></dxi-column>
+        <dxi-column dataField="phone" caption="Téléphone portable"></dxi-column>
+        <dxi-column dataField="cellPhone" caption="Téléphone fixe"></dxi-column>
+        <dxi-column dataField="email" caption="Email"></dxi-column> 
+
+    </dx-data-grid>
+</div>

@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ConnexionComponent } from './components/connexion/connexion.component';
+import { GestionComponent } from './components/gestion/gestion.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    component:ConnexionComponent
+  },
+  {
+    path:'gestion',
+    component:GestionComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
