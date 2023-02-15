@@ -30,7 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  rgb(40, 40, 40);
+    background-color:  rgb(194, 194, 194);
 }
 
 form {
@@ -46,6 +46,14 @@ body #container h1{
     margin: 0 auto;
     padding-bottom: 10px;
 }
+input[type=login] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
    
 input[type=password] {
     width: 100%;
@@ -57,7 +65,7 @@ input[type=password] {
 }
    
 input[type=submit] {
-    background-color: rgb(40, 40, 40);
+    background-color: #fe9d01;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

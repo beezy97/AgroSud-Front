@@ -8,18 +8,26 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DxDataGridModule } from 'devextreme-angular';
 import { EmployeeService } from './services/employee.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GestionSiteComponent } from './components/gestion-site/gestion-site.component';
+import { GestionServiceComponent } from './components/gestion-service/gestion-service.component';
+import { VisiteurComponent } from './components/visiteur/visiteur.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GestionComponent,
     ConnexionComponent,
-    NavbarComponent
+    NavbarComponent,
+    GestionSiteComponent,
+    GestionServiceComponent,
+    VisiteurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxDataGridModule
+    DxDataGridModule,
+    HttpClientModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
